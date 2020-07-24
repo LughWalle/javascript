@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>conteudos e exercicio - 1, DOM & seletores</title>
+  <style>
+    .p1{
+      color: orangered;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="page-title">T'itulo</h2>
+  <p id="paragraph" class="p1">De uma cor para este paragrafo!</p>
+  <h4 id="subtitle">subtitulo</h4>
+  <p id="second-paragraph" class="p1">segundo paragrafo</p>
+
+  <script>
+    //let's
+    let sub = document.getElementById("subtitle");
+    let titulo = document.getElementById("page-title");
+    let paragraph = document.getElementById("paragraph");
+    let secondParagraph = document.getElementById('second-paragraph');
+    let paragraphClass = document.getElementsByClassName('p1');
+    let titleTag = document.getElementsByTagName('h2')[0];
+
+    //console.log's
+    console.log(paragraph.style.color = 'red');
+    console.log(titulo.innerHTML = 'Harry Potter');
+    console.log(sub.innerHTML = 'E o prisioneiro de askhaban');
+    console.log(sub.style.color = 'violet');
+    console.log(secondParagraph.innerHTML = 'E um filme sobre uma crianca que descobre que e um bruxo e vai para a maior escola de magia do mundo');
+    console.log(secondParagraph.style.fontSize = '25px');
+    console.log(paragraphClass[0].style.color = "blue");
+    console.log(titleTag.style.fontSize = '50px');
+  </script>
+</body>
+</html>
