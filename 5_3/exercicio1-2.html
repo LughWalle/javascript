@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset=utf-8 />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+
+    <label>Square this number:
+      <input type="number" id="square-input" size="2">
+    </label>
+    <button id="square-button">Calculate</button>
+    <br><br>
+
+    <label>Half this number:
+      <input type="number" id="half-input" size="2">
+    </label>
+    <button id="half-button">Calculate</button>
+    <br><br>
+
+    <label>
+      Fraction:
+      <input type="number" id="percent1-input" size="2">
+    </label>
+    <label>
+      Whole:
+      <input type="number" id="percent2-input" size="2">
+    </label>
+    <button id="percent-button">Calculate</button>
+    <br><br>
+
+    <label>Calculate area of circle with radius:
+      <input type="number" id="area-input" size="2">
+    </label>
+    <button id="area-button">Calculate</button>
+    <br><br>
+    <div id="solution"></div>
+
+    <script>
+      let result = document.getElementById('solution');
+      let squareButton = document.getElementById('square-button');
+
+      function squareFunction() {
+        let square = document.getElementById('square-input').value;
+        result.innerHTML = Math.sqrt(square);
+        
+      }
+      squareButton.addEventListener('click', squareFunction);
+      let halfButton = document.getElementById('half-button');
+
+      function halfFunction() {
+        let half = document.getElementById('half-input').value;
+        result.innerHTML = half / 2;
+      }
+      halfButton.addEventListener('click', halfFunction);
+
+      let fractionButton = document.getElementById("percent-button");
+
+      function fractionFunction() {
+        let fractionNumber = document.getElementById('percent1-input').value;
+        let whole = document.getElementById('percent2-input').value;
+        result.innerHTML = `${fractionNumber / whole * 100}%`;
+      }
+      fractionButton.addEventListener('click', fractionFunction);
+      
+      let areaButton = document.getElementById('area-button');
+
+      function areaFunction() {
+        let area = document.getElementById('area-input').value;
+        result.innerHTML = (Math.PI * Math.pow(area, 2)).toFixed(2);      
+      }
+      areaButton.addEventListener('click', areaFunction);
+    </script>
+
+  </body>
+
+</html>
