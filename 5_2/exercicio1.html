@@ -60,17 +60,54 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-
-      // Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
-      // Adicione a tag div com a classe main - content como filho da tag body;
-      // Adicione a tag div com a classe center - content como filho da tag div criada no passo 2;
-      // Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
-      // Adicione a tag div com a classe left - content como filho da tag div criada no passo 2;
-      // Adicione a tag div com a classe right - content como filho da tag div criada no passo 2;
-      // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
-      // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ...como valores da lista.Essa lista deve ser filha do div criado no passo 6;
-      // Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
-
+      let docBody = document.body;
+      //1 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      let createTitle = document.createElement("h1");
+      createTitle.innerHTML = "Exercício 5.2 - JavaScript DOM";
+      docBody.appendChild(createTitle);
+      //2 Adicione a tag div com a classe main - content como filho da tag body;
+      let createDiv = document.createElement("div");
+      createDiv.className = "main-content";
+      docBody.appendChild(createDiv);
+      //3 Adicione a tag div com a classe center - content como filho da tag div criada no passo 2;
+      let createFirstChildDiv = document.createElement("div");
+      createFirstChildDiv.className = "center-content";
+      docBody.children[2].appendChild(createFirstChildDiv);
+      //4 Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let createP = document.createElement("p");
+      createP.innerHTML = "...Tudo nessa vida e merecimento, ovque a brisa leva volta com o vento, se nao se decidir, entao corra atras, entre o bem e o mal, eu fico com a paz!...";
+      docBody.children[2].firstElementChild.appendChild(createP);
+      //5 Adicione a tag div com a classe left - content como filho da tag div criada no passo 2;
+      let createSecondChildDiv = document.createElement("div");
+      createSecondChildDiv.className = "left-content";
+      docBody.children[2].appendChild(createSecondChildDiv);
+      //6 Adicione a tag div com a classe right - content como filho da tag div criada no passo 2;
+      let createThirdChildDiv = document.createElement("div");
+      createThirdChildDiv.className = "right-content";
+      docBody.children[2].appendChild(createThirdChildDiv);
+      //7 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+      let createImg = document.createElement("img");
+      createImg.src = "https://picsum.photos/200";
+      createImg.className = "small-image";
+      docBody.children[2].children[1].appendChild(createImg);
+      //8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ...como valores da lista.Essa lista deve ser filha do div criado no passo 6;
+      arr = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      let createList = document.createElement("ul");
+      docBody.children[2].children[2].appendChild(createList);
+      for (const i in arr) {
+        let itens = arr[i];
+        let createItemList = document.createElement('li');
+        createItemList.innerHTML = itens;
+        docBody.children[2].children[2].children[0].appendChild(createItemList);
+      }
+      //9 Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+      
+      let array = ['texto de exemplo', 'muito massa', 'olha so que legal'];
+      for (const i in array) {
+        let createH3 = document.createElement("h3");
+        createH3.innerHTML = array[i];
+        docBody.children[2].appendChild(createH3);        
+      }
     </script>
   </body>
 
