@@ -4,8 +4,11 @@ a {
   padding-right: 13px;
   border-right: 1px solid black;
 }
-.nav-bar {
+.color, .nav-style a {
   background-color: rgba(45, 150, 196, 50);
+}
+.nav-bar {
+  
   position: fixed;
   top: 0px;
   padding-top: 45px;
@@ -20,4 +23,13 @@ a {
 }
 .nav-style {
   display: none;
+  position: absolute;
+  text-align: center;
+  left: 38%;
+  top: 2%;
+}
+.nav-style a {
+  padding: 25px;
+  border-radius: 40px;
+  border: 2px outset black;
 }
