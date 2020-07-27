@@ -4,6 +4,9 @@ a {
   padding-right: 13px;
   border-right: 1px solid black;
 }
+header {
+  background-color: rgb(20, 70, 196);
+}
 .color, .nav-style a {
   background-color: rgba(20, 70, 196, 25);
 }
@@ -22,7 +25,8 @@ a {
   font-size: 25px;
 }
 #title {
-  margin-top: 130px;
+  padding-top: 130px;
+  top: 0px;
 }
 .nav-style {
   display: none;
