@@ -5,6 +5,9 @@ a {
   border-right: 1px solid black;
 }
 .color, .nav-style a {
+  background-color: rgba(20, 70, 196, 25);
+}
+.color-light, .nav-style a {
   background-color: rgba(45, 150, 196, 50);
 }
 .nav-bar {
