@@ -8,8 +8,7 @@ const arrays = [
 ];
 
 
-function flatten() {
-  return arrays.reduce((currentValue, number) => currentValue.concat(number));
-}
+const flatten = () => arrays.reduce((acc, number) => acc.concat(number));
+
 
 assert.deepEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
